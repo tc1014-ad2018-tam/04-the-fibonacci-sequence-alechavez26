@@ -1,0 +1,37 @@
+/*
+ * objetivo: mostrar n numeros de la serie fibonacci
+ *
+ * Alejandra Chávez Cruz
+ * 03/Septiembre/2018
+ *A01411970@itesm.mx
+ *
+ */
+#include <stdio.h>
+  int main() {
+    //Introducción de variables
+    int n;
+    int v1 = 0;
+    int v2 = 1;
+    int next;
+    int h;
+
+    printf("Give me the numbers:\n");
+    scanf("%d", &n);
+
+    printf("Fibonacci serie:\n", n);
+
+    for (h = 0; h < n; h++)
+    {
+        if (h <= 1)
+            next = h;
+        else
+        {
+            next = v1 + v2;
+            v1 = v2;
+            v2 = next;
+        }
+        printf("%d\n", next);
+    }
+
+    return 0;
+}
